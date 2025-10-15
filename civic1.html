@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicConnect - My Reports</title>
+  <style>
+    
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafc;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+}
+
+.logo {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+nav a {
+  margin: 0 12px;
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #0078ff;
+}
+.btn-authority {
+  background: #0078ff;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  background: #eef1f4;
+cursor: pointer;
+}
+
+.tabs button.active {
+  background: #0078ff;
+  color: white;
+}
+
+.issue-card {
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+}
+
+.issue-card:last-child {
+  border-bottom: none;
+}
+
+.issue-card h4 {
+  margin: 0 0 5px 0;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.status {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.status.in-progress {
+  background: #fff7d6;
+  color: #a67c00;
+}
+
+.status.resolved {
+  background: #d6f5dd;
+  color: #087a2a;
+}
+
+.status.submitted {
+  background: #e3e8ff;
+  color: #0037b3;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🏙 CivicConnect</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Report Issue</a>
+      <a href="#" class="active">My Reports</a>
+      <a href="#">Explore</a>
+      <a href="#">FAQ</a>
+      <button class="btn-authority">Authority Portal</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>My Reported Issues</h2>
+    <div class="tabs">
+      <button class="active">All (3)</button>
+      <button>Submitted (1)</button>
+      <button>In Progress (1)</button>
+      <button>Resolved (1)</button>
+    </div>
+
+    <div class="issue-card">
+      <h4>Large Pothole on Main Street</h4>
+      <p>Near the intersection with 5th Avenue, causing traffic issues</p>
+      <div class="meta">
+        <span>🕒 2 days ago</span>
+        <span>• Pothole</span>
+        <span class="status in-progress">In Progress</span>
+      </div>
+    </div>
+
+    <div class="issue-card">
+      <h4>Broken Streetlight</h4>
+      <p>Streetlight not working on Park Avenue, creating safety concerns</p>
+      <div class="meta">
+        <span>🕒 5 days ago</span>
+        <span>• Streetlight</span>
+        <span class="status resolved">Resolved</span>
+      </div>
+    </div>
+
+    <div class="issue-card">
+      <h4>Garbage Accumulation</h4>
+      <p>Garbage not collected for a week near Community Center</p>
+      <div class="meta">
+        <span>🕒 1 day ago</span>
+        <span>• Garbage</span>
+        <span class="status submitted">Submitted</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
