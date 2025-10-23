@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authority Dashboard - CivicConnect</title>
+  <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="top-nav">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="logo">
+      <span>CivicConnect</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Report Issue</a>
+      <a href="#">My Reports</a>
+      <a href="#">Explore</a>
+      <a href="#">FAQ</a>
+      <button class="portal-btn">Authority Portal</button>
+    </div>
+  </nav>
+
+  <!-- Secondary Navbar -->
+  <div class="sub-nav">
+    <span class="shield">🛡️ Authority Dashboard</span>
+    <div class="sub-links">
+      <a href="#">Overview</a>
+      <a href="#">Grievances</a>
+      <a href="#" class="active">Analytics</a>
+      <a href="#">Users</a>
+      <button class="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <main class="content">
+    <h2>Analytics & Reports</h2>
+
+    <div class="top-row">
+      <div class="card">
+        <h3>Issue Categories Distribution</h3>
+        <div class="chart-placeholder">[Bar Chart]</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Resolution Time Trends</h3>
+          <div class="controls">
+            <select>
+              <option>Last 7 Days</option>
+              <option>Last 30 Days</option>
+            </select>
+            <button class="export-btn">⬇ Export PDF</button>
+          </div>
+        </div>
+        <div class="chart-placeholder">[Line Chart]</div>
+      </div>
+    </div>
+
+    <div class="card root-cause">
+      <h3>Root Cause Analysis</h3>
+      <div class="causes">
+        <div class="cause red">
+          <h4>Pothole Hotspots</h4>
+          <p>Main Street corridor showing 40% increase due to heavy traffic and aging infrastructure</p>
+        </div>
+        <div class="cause yellow">
+          <h4>Garbage Collection Delays</h4>
+          <p>Market area experiences delays on weekends due to insufficient collection vehicles</p>
+        </div>
+        <div class="cause blue">
+          <h4>Streetlight Failures</h4>
+          <p>Park Avenue section needs systematic bulb replacement program</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
