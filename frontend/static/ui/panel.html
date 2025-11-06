@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Authority Dashboard</title>
+  <link rel="stylesheet" href="panel.css"/>
+</head>
+<body>
+ 
+  <header class="top-bar">
+    <div class="logo">🏢 CivicConnect</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Report Issue</a>
+      <a href="#">My Reports</a>
+      <a href="#">Explore</a>
+      <a href="#">FAQ</a>
+      <button class="authority-btn">Authority Portal</button>
+    </nav>
+  </header>
+
+
+  <nav class="authority-dashboard">
+    <span class="dashboard-title">Authority Dashboard</span>
+    <ul class="dashboard-links">
+      <li><a class="active" href="#">Overview</a></li>
+      <li><a href="#">Grievances</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Users</a></li>
+      <li><button class="logout-btn">Logout</button></li>
+    </ul>
+  </nav>
+
+ 
+  <main class="main-content">
+    <section class="cards">
+      <div class="card blue">
+        <h4>Total Open</h4>
+        <p class="count">65</p>
+      </div>
+      <div class="card orange">
+        <h4>In Progress</h4>
+        <p class="count">42</p>
+      </div>
+      <div class="card green">
+        <h4>Resolved Today</h4>
+        <p class="count">18</p>
+      </div>
+      <div class="card purple">
+        <h4>Avg Resolution</h4>
+        <p class="count">4.2 days</p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="box">
+        <h3>Recent Grievances</h3>
+        <div class="map-placeholder">
+          <p style="padding: 40px; color: gray;">[Map Placeholder]</p>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Department Performance</h3>
+        <div class="progress-row">
+          <span>Public Works</span>
+          <div class="progress-bar">
+            <div class="progress blue" style="width: 78%"></div>
+          </div>
+          <span class="percent">78%</span>
+        </div>
+        <div class="progress-row">
+          <span>Sanitation</span>
+          <div class="progress-bar">
+            <div class="progress green" style="width: 92%"></div>
+          </div>
+          <span class="percent">92%</span>
+        </div>
+        <div class="progress-row">
+          <span>Electrical</span>
+          <div class="progress-bar">
+            <div class="progress orange" style="width: 65%"></div>
+          </div>
+          <span class="percent">65%</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
