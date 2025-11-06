@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Issue - CivicConnect</title>
+  <link rel="stylesheet" href="cregister.css">
+</head>
+
+<script>
+  const fileInput = document.querySelector('.upload-box input[type="file"]');
+  const uploadBox = document.querySelector('.upload-box');
+
+  fileInput.addEventListener('change', () => {
+    const files = fileInput.files;
+    const previewContainer = document.createElement('div');
+    previewContainer.classList.add('preview-container');
+
+    // Clear any old previews
+    const oldPreview = uploadBox.querySelector('.preview-container');
+    if (oldPreview) oldPreview.remove();
+
+    // Loop through selected files and display them
+    Array.from(files).forEach(file => {
+      if (!file.type.startsWith('image/')) return; // skip non-images
+
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.classList.add('preview-img');
+        previewContainer.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+
+    uploadBox.appendChild(previewContainer);
+  });
+</script>
+
+<body>
+  <div class="form-container">
+    
+    <button type="button" class="location-btn">📍 Use My Current Location</button>
+
+    <form>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="title">Issue Title *</label>
+          <input type="text" id="title" placeholder="Brief description of the issue" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category *</label>
+          <select id="category" required>
+            <option >Select a category</option>
+            <option>Potholes</option>
+            <option>Garbage</option>
+            <option>Streetlights</option>
+            <option>Drainage</option>
+          </select>
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="description">Detailed Description *</label>
+        <textarea id="description" rows="5" placeholder="Provide more details about the issue..." required></textarea>
+      </div>
+
+      
+      <div class="form-group">
+        <label>Upload Photos</label>
+        <div class="upload-box">
+          <div class="upload-icon">☁️⬆️</div>
+          <p>Click to upload photos or drag and drop</p>
+          <span>PNG, JPG up to 10MB</span>
+          <input type="file" accept=".png,.jpg,.jpeg" multiple>
+        </div>
+      </div>
+
+      
+      <div class="form-group checkbox">
+        <input type="checkbox" id="anonymous">
+        <label for="anonymous">Submit anonymously</label>
+      </div>
+
+      
+      <div class="form-actions">
+        <button type="button" class="cancel-btn">Cancel</button>
+        <button type="submit" class="submit-btn">📍 Submit Report</button>
+      </div>
+    </form>
+  </div>
+
+  
+</body>
+</html>
